@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clock-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.clock-wrapper {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 40px;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  min-width: 400px;
+}
+
+.title {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+.clock-display {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.time {
+  font-size: 4rem;
+  font-weight: bold;
+  color: white;
+  font-family: "Courier New", monospace;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  letter-spacing: 2px;
+}
+
+.period {
+  font-size: 1.5rem;
+  color: #f0f0f0;
+  font-weight: 500;
+  margin-left: 10px;
+}
+
+.date-display {
+  color: #e0e0e0;
+  font-size: 1.2rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+  .clock-wrapper {
+    min-width: 300px;
+    padding: 30px 20px;
+  }
+
+  .title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .time {
+    font-size: 2.5rem;
+  }
+
+  .period {
+    font-size: 1.2rem;
+  }
+
+  .date-display {
+    font-size: 1rem;
+  }
+}
+
+/* Animation for smooth transitions */
+.time,
+.period,
+.date-display {
+  transition: all 0.3s ease;
+}
+
+/* Subtle glow effect */
+.clock-wrapper:hover {
+  box-shadow: 0 8px 32px rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
