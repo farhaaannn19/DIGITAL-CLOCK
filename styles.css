@@ -71,7 +71,6 @@ body {
   letter-spacing: 1px;
 }
 
-/* Responsive design */
 @media (max-width: 480px) {
   .clock-wrapper {
     min-width: 300px;
